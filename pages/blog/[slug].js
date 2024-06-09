@@ -28,12 +28,9 @@ const BlogPost = ({ post }) => {
         <title>{"Blog - " + post.title}</title>
         <meta name="description" content={post.preview} />
       </Head>
-      {data.showCursor && <Cursor />}
 
       <div
-        className={`container mx-auto mt-10 ${
-          data.showCursor && "cursor-none"
-        }`}
+        className={`container mx-auto mt-10 $`}
       >
         <Header isBlog={true} />
         <div className="mt-10 flex flex-col">
@@ -56,7 +53,7 @@ const BlogPost = ({ post }) => {
           </h2>
         </div>
         <ContentSection content={post.content}></ContentSection>
-        <Footer />
+        {/* <Footer /> */}
       </div>
       {process.env.NODE_ENV === "development" && (
         <div className="fixed bottom-6 right-6">
